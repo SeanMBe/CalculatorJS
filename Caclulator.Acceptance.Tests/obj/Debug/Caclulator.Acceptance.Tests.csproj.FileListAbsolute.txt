@@ -1,0 +1,15 @@
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\obj\Debug\Caclulator.Acceptance.Tests.csprojResolveAssemblyReference.cache
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\chromedriver.exe
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\Caclulator.Acceptance.Tests.dll.config
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\Caclulator.Acceptance.Tests.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\Caclulator.Acceptance.Tests.pdb
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\IISExpress.Automation.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\MavenThought.Commons.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\nunit.framework.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\TechTalk.SpecFlow.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\WebDriver.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\IISExpress.Automation.pdb
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\nunit.framework.xml
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\bin\Debug\WebDriver.xml
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\obj\Debug\Caclulator.Acceptance.Tests.dll
+c:\Projects\Calculator\Caclulator.Acceptance.Tests\obj\Debug\Caclulator.Acceptance.Tests.pdb
