@@ -82,9 +82,16 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Entering a number")]
+        [NUnit.Framework.TestCaseAttribute("9", null)]
         [NUnit.Framework.TestCaseAttribute("8", null)]
         [NUnit.Framework.TestCaseAttribute("7", null)]
         [NUnit.Framework.TestCaseAttribute("6", null)]
+        [NUnit.Framework.TestCaseAttribute("5", null)]
+        [NUnit.Framework.TestCaseAttribute("4", null)]
+        [NUnit.Framework.TestCaseAttribute("3", null)]
+        [NUnit.Framework.TestCaseAttribute("2", null)]
+        [NUnit.Framework.TestCaseAttribute("1", null)]
+        [NUnit.Framework.TestCaseAttribute("0", null)]
         public virtual void EnteringANumber(string number, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Entering a number", exampleTags);

@@ -15,6 +15,13 @@ Scenario Outline: Entering a number
 	Then I see the result is <number>
 	Examples:
 	| number |
+	| 9      |
 	| 8      |
 	| 7      |
 	| 6      |
+	| 5      |
+	| 4      |
+	| 3      |
+	| 2      |
+	| 1      |
+	| 0      |

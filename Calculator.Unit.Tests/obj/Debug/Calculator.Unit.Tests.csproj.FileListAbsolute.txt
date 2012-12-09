@@ -1,0 +1,5 @@
+C:\Projects\CalculatorJS\Calculator.Unit.Tests\bin\Debug\Calculator.Unit.Tests.dll
+C:\Projects\CalculatorJS\Calculator.Unit.Tests\bin\Debug\Calculator.Unit.Tests.pdb
+C:\Projects\CalculatorJS\Calculator.Unit.Tests\obj\Debug\Calculator.Unit.Tests.csprojResolveAssemblyReference.cache
+C:\Projects\CalculatorJS\Calculator.Unit.Tests\obj\Debug\Calculator.Unit.Tests.dll
+C:\Projects\CalculatorJS\Calculator.Unit.Tests\obj\Debug\Calculator.Unit.Tests.pdb
