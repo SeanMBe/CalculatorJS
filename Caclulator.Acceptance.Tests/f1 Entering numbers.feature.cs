@@ -113,6 +113,7 @@ this.ScenarioSetup(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 =\"", "42", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 =\"", "50", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 + 33 =\"", "83", null)]
+        [NUnit.Framework.TestCaseAttribute("\"3 + 4 + \"", "7", null)]
         public virtual void AddingTwoNumbers(string calculation, string expected, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding two numbers", exampleTags);

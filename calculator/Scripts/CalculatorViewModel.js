@@ -51,11 +51,14 @@
 
     this.clickAdd = function () {
         if (this.operation === "+") {
-            this.first(this.first() + this.result());
+            var add = this.first() + this.second();
+            this.first(add);
+            this.result(add);
         } else {
             this.first(this.result());
+            this.result(0);
         }
-        this.result(0);
+        
         this.operation = "+";
     };
 

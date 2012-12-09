@@ -5,29 +5,28 @@
 
 
 <div class='liveExample'> 
-    
-    <div>You've clicked <span data-bind='text: numberOfClicks'>&nbsp;</span> times</div>
      
     <div id="result" data-bind='text: result'></div>
-    <button id="7" data-bind='click: clickSeven'></button>
-    <button id="8" data-bind='click: clickEight'></button>
-    <button id="9" data-bind='click: clickNine'></button>
-    <button id="4" data-bind='click: clickFour'></button>
-    <button id="5" data-bind='click: clickFive'></button>
-    <button id="6" data-bind='click: clickSix'></button>
-    <button id="1" data-bind='click: clickOne'></button>
-    <button id="2" data-bind='click: clickTwo'></button>
-    <button id="3" data-bind='click: clickThree'></button>
-    <button id="0" data-bind='click: clickZero'></button>
-    <button id="add" data-bind='click: clickAdd'></button>
-    <button id="equals" data-bind='click: clickEquals'></button>
-
-    <button data-bind='click: registerClick, disable: hasClickedTooManyTimes'>Click me</button>
-     
-    <div data-bind='visible: hasClickedTooManyTimes'>
-        That's too many clicks! Please stop before you wear out your fingers.
-        <button data-bind='click: resetClicks'>Reset clicks</button>
+    <div>
+        <button id="7" data-bind='click: clickSeven'>7</button>
+        <button id="8" data-bind='click: clickEight'>8</button>
+        <button id="9" data-bind='click: clickNine'>9</button>
     </div>
+    <div>
+        <button id="4" data-bind='click: clickFour'>4</button>
+        <button id="5" data-bind='click: clickFive'>5</button>
+        <button id="6" data-bind='click: clickSix'>6</button>
+    </div>
+    <div>
+        <button id="1" data-bind='click: clickOne'>1</button>
+        <button id="2" data-bind='click: clickTwo'>2</button>
+        <button id="3" data-bind='click: clickThree'>3</button>
+    </div>
+    
+    <button id="0" data-bind='click: clickZero'>0</button>
+    <button id="add" data-bind='click: clickAdd'>+</button>
+    <button id="equals" data-bind='click: clickEquals'>=</button>
+
         
 </div>​
 
