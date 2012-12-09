@@ -1,10 +1,12 @@
 ﻿using System;
-using Caclulator.Acceptance.Tests;
+using System.Globalization;
+using System.Linq;
+using MavenThought.Commons.Extensions;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 
-namespace MyNamespace
+namespace Caclulator.Acceptance.Tests
 {
     [Binding]
     public class StepDefinitions
@@ -29,7 +31,26 @@ namespace MyNamespace
             var number = CurrentScenario.WebDriver.FindElement(By.Id(digits.ToString()));
             number.Click();
         }
+
+        [When(@"I calculate ""(.*)""")]
+        public void WhenICalculate(string calculation)
+        {
+            calculation.ToList().Where(ch => ch != ' ').ForEach(PushButton);
+
+        }
+
+        private void PushButton(char button)
+        {
+
+            string id = button.ToString();
+            id = button == '+' ? "add" : id;
+            id = button == '=' ? "equals" : id;
+
+            var number = CurrentScenario.WebDriver.FindElement(By.Id(id));
+            number.Click();
+        }
     }
+
 }
 
 

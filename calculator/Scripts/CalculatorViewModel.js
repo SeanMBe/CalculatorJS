@@ -1,7 +1,10 @@
 ﻿var CalculatorViewModel = function() {
     this.numberOfClicks = ko.observable(0);
     this.result = ko.observable(0);
-
+    this.first = ko.observable(null);
+    this.second = ko.observable(null);
+    this.operation = ko.observable(null);
+    
     this.registerClick = function() {
         this.numberOfClicks(this.numberOfClicks() + 1);
     };
@@ -44,6 +47,26 @@
 
     this.clickZero = function () {
         this.enterNumber(0);
+    };
+
+    this.clickAdd = function () {
+        if (this.operation === "+") {
+            this.first(this.first() + this.result());
+        } else {
+            this.first(this.result());
+        }
+        this.result(0);
+        this.operation = "+";
+    };
+
+    this.clickEquals = function () {
+        this.second(this.result());
+        if (this.operation === "+") {
+            this.result(this.first() + this.second());
+            this.first = null;
+            this.second = null;
+            this.operation = null;
+        }
     };
 
     this.enterNumber = function(digit) {

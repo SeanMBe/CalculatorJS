@@ -106,6 +106,27 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Adding two numbers")]
+        [NUnit.Framework.TestCaseAttribute("\"1 + 1 =\"", "2", null)]
+        [NUnit.Framework.TestCaseAttribute("\"11 + 31 =\"", "42", null)]
+        [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 =\"", "50", null)]
+        [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 + 33 =\"", "83", null)]
+        public virtual void AddingTwoNumbers(string calculation, string expected, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding two numbers", exampleTags);
+#line 29
+this.ScenarioSetup(scenarioInfo);
+#line 30
+ testRunner.Given("I open the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When(string.Format("I calculate {0}", calculation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then(string.Format("I see the result is {0}", expected), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

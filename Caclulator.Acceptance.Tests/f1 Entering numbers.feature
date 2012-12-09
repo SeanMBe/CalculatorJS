@@ -25,3 +25,14 @@ Scenario Outline: Entering a number
 	| 2      |
 	| 1      |
 	| 0      |
+
+Scenario Outline: Adding two numbers
+	Given I open the calculator
+	When I calculate <calculation> 
+	Then I see the result is <expected>
+Examples:
+	| calculation          | expected |
+	| "1 + 1 ="            | 2        |
+	| "11 + 31 ="          | 42       |
+	| "11 + 31 + 8 ="      | 50       |
+	| "11 + 31 + 8 + 33 =" | 83       |
