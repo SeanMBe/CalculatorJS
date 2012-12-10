@@ -1,92 +1,71 @@
 ﻿var CalculatorViewModel = function() {
-    this.numberOfClicks = ko.observable(0);
-    this.result = ko.observable(0);
-    this.first = ko.observable(null);
-    this.second = ko.observable(null);
-    this.operation = ko.observable(null);
+    var self = this;
+    self.calculator = new Calculator();
+    self.result = ko.observable(0);
     
-    this.registerClick = function() {
-        this.numberOfClicks(this.numberOfClicks() + 1);
+    self.propertyChanged = ko.observable(1);
+    self.calculator.displayChanged(
+        function() {
+            self.updateResult();
+        });
+
+    self.updateResult = function() {
+        self.result(self.calculator.display());
     };
 
-    this.clickNine = function() {
-        this.enterNumber(9);
+  
+    self.clickNine = function() {
+        self.calculator.nine();
     };
 
-    this.clickEight = function () {
-        this.enterNumber(8);
+    self.clickEight = function () {
+        self.calculator.eight();
     };
 
-    this.clickSeven = function () {
-        this.enterNumber(7);
+    self.clickSeven = function () {
+        self.calculator.seven();
     };
 
-    this.clickSix = function () {
-        this.enterNumber(6);
+    self.clickSix = function () {
+        self.calculator.six();
     };
 
-    this.clickFive = function () {
-        this.enterNumber(5);
+    self.clickFive = function () {
+        self.calculator.five();
     };
 
-    this.clickFour = function () {
-        this.enterNumber(4);
+    self.clickFour = function () {
+        self.calculator.four();
     };
 
-    this.clickThree = function () {
-        this.enterNumber(3);
+    self.clickThree = function () {
+        self.calculator.three();
     };
 
-    this.clickTwo = function () {
-        this.enterNumber(2);
+    self.clickTwo = function () {
+        self.calculator.two();
     };
 
-    this.clickOne = function () {
-        this.enterNumber(1);
-    };
-
-    this.clickZero = function () {
-        this.enterNumber(0);
-    };
-
-    this.clickAdd = function () {
-        if (this.operation === "+") {
-            var add = this.first() + this.second();
-            this.first(add);
-            this.result(add);
-        } else {
-            this.first(this.result());
-            this.result(0);
-        }
+    self.clickOne = function () {
+        self.calculator.one();
         
-        this.operation = "+";
     };
 
-    this.clickEquals = function () {
-        this.second(this.result());
-        if (this.operation === "+") {
-            this.result(this.first() + this.second());
-            this.first = null;
-            this.second = null;
-            this.operation = null;
-        }
+    self.clickZero = function () {
+        self.calculator.zero();
     };
 
-    this.enterNumber = function(digit) {
-        var allowed = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        if (allowed.indexOf(digit) < 0) {
-            throw "must be a single digit";
-        }
-        this.result(this.result() * 10 + digit);
+    self.clickAdd = function () {
+        self.calculator.add();
     };
 
-    this.resetClicks = function() {
-        this.numberOfClicks(0);
+    self.clickEquals = function () {
+        self.calculator.equals();
     };
- 
-    this.hasClickedTooManyTimes = ko.computed(function() {
-        return this.numberOfClicks() >= 3;
-    }, this);
+
+    self.resetClicks = function() {
+        self.numberOfClicks(0);
+    };
 };
 
 ko.applyBindings(new CalculatorViewModel());
