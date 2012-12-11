@@ -45,6 +45,7 @@ namespace Caclulator.Acceptance.Tests
             string id = button.ToString();
             id = button == '+' ? "add" : id;
             id = button == '=' ? "equals" : id;
+            id = button == '-' ? "subtract" : id;
 
             var number = CurrentScenario.WebDriver.FindElement(By.Id(id));
             number.Click();

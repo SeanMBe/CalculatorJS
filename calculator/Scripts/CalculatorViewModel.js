@@ -1,6 +1,6 @@
-﻿var CalculatorViewModel = function() {
+﻿var CalculatorViewModel = function(calculator) {
     var self = this;
-    self.calculator = new Calculator();
+    self.calculator = calculator;
     self.result = ko.observable(0);
     
     self.propertyChanged = ko.observable(1);
@@ -59,6 +59,10 @@
         self.calculator.add();
     };
 
+    self.clickSubtract = function () {
+        self.calculator.subtract();
+    };
+
     self.clickEquals = function () {
         self.calculator.equals();
     };
@@ -68,4 +72,4 @@
     };
 };
 
-ko.applyBindings(new CalculatorViewModel());
+ko.applyBindings(new CalculatorViewModel(new Calculator()));

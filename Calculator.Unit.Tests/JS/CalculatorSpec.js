@@ -47,6 +47,18 @@ describe("Calculator", function () {
         });
 
     });
+
+    describe("1 - 2 =", function () {
+        it("should show -1", function () {
+            calculator.one();
+            calculator.subtract();
+            calculator.two();
+            calculator.equals();
+
+            expect(calculator.display()).toEqual(-1);
+        });
+
+    });
     
 
 });

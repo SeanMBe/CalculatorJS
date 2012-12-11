@@ -5,10 +5,11 @@
 
 describe("CalculatorViewModel", function () {
     var viewModel;
-    
+    var calculator;
 
     beforeEach(function () {
-        viewModel = new CalculatorViewModel();
+        calculator = new Calculator();
+        viewModel = new CalculatorViewModel(calculator);
     });
 
     it("should be zero when created", function () {
@@ -74,6 +75,13 @@ describe("CalculatorViewModel", function () {
         it("entering 9 should show 9", function () {
             viewModel.clickNine();
             expect(viewModel.result()).toEqual(9);
+        });
+
+
+        it("subtract handler should call calcualator subtract", function () {
+            spyOn(calculator, 'subtract');
+            viewModel.clickSubtract();
+            expect(calculator.subtract).toHaveBeenCalled();
         });
 
         it("entering 1 2 3 should show 123", function () {

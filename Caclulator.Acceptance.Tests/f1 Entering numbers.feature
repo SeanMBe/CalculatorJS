@@ -26,7 +26,7 @@ Scenario Outline: Entering a number
 	| 1      |
 	| 0      |
 
-Scenario Outline: Adding two numbers
+Scenario Outline: Basic calculations
 	Given I open the calculator
 	When I calculate <calculation> 
 	Then I see the result is <expected>
@@ -37,3 +37,5 @@ Examples:
 	| "11 + 31 + 8 ="      | 50       |
 	| "11 + 31 + 8 + 33 =" | 83       |
 	| "3 + 4 + "           | 7        |
+	| "3 - 4 = "           | -1       |
+	| "3 + 4 - 5 = "       | 2        |

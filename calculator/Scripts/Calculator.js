@@ -76,10 +76,31 @@
         self.displayHasChanged();
     };
 
+    self.subtract = function () {
+        if (self.operation === "-") {
+            var calc = self.result - self.first;
+            self.first = calc;
+            self.result = calc;
+        } else {
+            self.first = self.result;
+            self.result = 0;
+        }
+
+        self.operation = "-";
+        self.last = '-';
+        self.displayHasChanged();
+    };
+
     self.equals = function() {
         self.second = self.result;
         if (self.operation === "+") {
             self.result = self.first + self.second;
+            self.first = null;
+            self.second = null;
+            self.operation = null;
+        }
+        else if (self.operation === "-") {
+            self.result = self.first - self.result;
             self.first = null;
             self.second = null;
             self.operation = null;
@@ -90,6 +111,9 @@
 
     self.enterNumber = function(digit) {
         if (self.last === '+') {
+            self.result = 0;
+        }
+        else if (self.last === '-') {
             self.result = 0;
         }
 

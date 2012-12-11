@@ -108,15 +108,17 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adding two numbers")]
+        [NUnit.Framework.DescriptionAttribute("Basic calculations")]
         [NUnit.Framework.TestCaseAttribute("\"1 + 1 =\"", "2", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 =\"", "42", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 =\"", "50", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 + 33 =\"", "83", null)]
         [NUnit.Framework.TestCaseAttribute("\"3 + 4 + \"", "7", null)]
-        public virtual void AddingTwoNumbers(string calculation, string expected, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("\"3 - 4 = \"", "-1", null)]
+        [NUnit.Framework.TestCaseAttribute("\"3 + 4 - 5 = \"", "2", null)]
+        public virtual void BasicCalculations(string calculation, string expected, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding two numbers", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic calculations", exampleTags);
 #line 29
 this.ScenarioSetup(scenarioInfo);
 #line 30
