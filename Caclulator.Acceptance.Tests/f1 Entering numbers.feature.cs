@@ -19,8 +19,8 @@ namespace Caclulator.Acceptance.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Entering numbers")]
-    public partial class EnteringNumbersFeature
+    [NUnit.Framework.DescriptionAttribute("Arithmetic")]
+    public partial class ArithmeticFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -32,8 +32,8 @@ namespace Caclulator.Acceptance.Tests
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Entering numbers", "In order do math calculations\r\nAs a math idiot\r\nI want to be able to enter number" +
-                    "s", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Arithmetic", "In order do math calculations\r\nAs a math idiot\r\nI want a device to do arithmetic " +
+                    "with", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -108,7 +108,7 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Basic calculations")]
+        [NUnit.Framework.DescriptionAttribute("Basic arithmetic")]
         [NUnit.Framework.TestCaseAttribute("\"1 + 1 =\"", "2", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 =\"", "42", null)]
         [NUnit.Framework.TestCaseAttribute("\"11 + 31 + 8 =\"", "50", null)]
@@ -116,9 +116,9 @@ this.ScenarioSetup(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("\"3 + 4 + \"", "7", null)]
         [NUnit.Framework.TestCaseAttribute("\"3 - 4 = \"", "-1", null)]
         [NUnit.Framework.TestCaseAttribute("\"3 + 4 - 5 = \"", "2", null)]
-        public virtual void BasicCalculations(string calculation, string expected, string[] exampleTags)
+        public virtual void BasicArithmetic(string calculation, string expected, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic calculations", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Basic arithmetic", exampleTags);
 #line 29
 this.ScenarioSetup(scenarioInfo);
 #line 30

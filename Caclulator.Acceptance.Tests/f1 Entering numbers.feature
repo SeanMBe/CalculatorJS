@@ -1,8 +1,8 @@
 ﻿
-Feature: Entering numbers
+Feature: Arithmetic
 	In order do math calculations
 	As a math idiot
-	I want to be able to enter numbers
+	I want a device to do arithmetic with
 
 
 Scenario: Opening the calculator
@@ -26,7 +26,7 @@ Scenario Outline: Entering a number
 	| 1      |
 	| 0      |
 
-Scenario Outline: Basic calculations
+Scenario Outline: Basic arithmetic
 	Given I open the calculator
 	When I calculate <calculation> 
 	Then I see the result is <expected>
