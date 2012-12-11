@@ -2,8 +2,8 @@
     var self = this;
     self.display = 0;
     self.result = 0;
-    self.first = null;
-    self.second = null;
+    self.first = 0;
+    self.second = 0;
     self.operation = null;
     self.callbacks = [];
 
@@ -63,15 +63,16 @@
 
     self.add = function() {
         if (self.operation === "+") {
-            var calc = self.result + self.second;
+            var calc = self.result + self.first;
             self.first = calc;
-            self.result = 0;
+            self.result = calc;
         } else {
             self.first = self.result;
             self.result = 0;
         }
 
         self.operation = "+";
+        self.last = '+';
         self.displayHasChanged();
     };
 
@@ -83,15 +84,21 @@
             self.second = null;
             self.operation = null;
         }
+        self.last = '=';
         self.displayHasChanged();
     };
 
     self.enterNumber = function(digit) {
+        if (self.last === '+') {
+            self.result = 0;
+        }
+
         var allowed = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
         if (allowed.indexOf(digit) < 0) {
             throw "must be a single digit";
         }
         self.result = self.result * 10 + digit;
+        self.last = digit;
         self.displayHasChanged();
 
     };
