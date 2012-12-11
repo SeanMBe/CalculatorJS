@@ -1,4 +1,8 @@
-/// <reference path="../../calculator/scripts/CalculatorViewModel.js" />
+/// <reference path="../../../calculator/scripts/knockout-2.2.0.js" />
+/// <reference path="../../../calculator/scripts/Calculator.js" />
+/// <reference path="../../../calculator/scripts/CalculatorViewModel.js" />
+
+
 describe("CalculatorViewModel", function () {
     var viewModel;
     
