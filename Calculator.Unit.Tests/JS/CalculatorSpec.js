@@ -1,4 +1,6 @@
-describe("Calculator", function() {
+/// <reference path="../../calculator/scripts/Calculator.js" />
+
+describe("Calculator", function () {
     var calculator;
 
     beforeEach(function() {

@@ -1,3 +1,4 @@
+/// <reference path="../../calculator/scripts/CalculatorViewModel.js" />
 describe("CalculatorViewModel", function () {
     var viewModel;
     
